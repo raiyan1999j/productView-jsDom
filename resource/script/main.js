@@ -26,10 +26,29 @@ const imgContainer=[
 
 // get selected color
 selectColor.addEventListener("click",(items)=>{
-    // console.dir(items.target.id)
-    const getSequence = items.target.id;
+    if(items.target.classList.contains("h-4")){
+        const takeId = items.target.parentElement.id;
 
-    colorBaseProduct(getSequence)
+        colorBaseProduct(takeId);
+    }else{
+        const takeId = items.target.id;
+
+        colorBaseProduct(takeId)
+    }
+
+    if(items.target.classList.contains("h-4")){
+        const step1 = items.target.parentElement.closest("div");
+        const step2 = step1.querySelectorAll("div>span");
+        const step3 = items.target.style.backgroundColor;
+
+        step2.forEach((value)=>{
+            value.style.borderColor = "transparent";
+            value.style.borderWidth = "0px"
+        })
+
+        items.target.parentElement.style.borderColor = step3;
+        items.target.parentElement.style.borderWidth = "2px"
+    }
 })
 
 // show product base on color
@@ -51,7 +70,6 @@ increment.addEventListener("click",()=>{countCurrentOrder(1)})
 
 // count current order
 function countCurrentOrder(value){
-    // console.log(countOrder.innerText)
     const currentOrder = parseInt(countOrder.innerText) + parseInt(value) < 0 ? 0 : parseInt(countOrder.innerText) + parseInt(value);
 
     countOrder.innerText = currentOrder;
@@ -62,6 +80,20 @@ selectSize.addEventListener("click",(items)=>{
     const step1 = (items.target.innerText).match(/\d+/g);
     const step2 = Number(step1).toFixed(2);
 
-    showPrice.innerText = "$" + step2;
+    if(step2 == "NaN"){
+        showPrice.innerText = showPrice.innerText
+    }else{
+        showPrice.innerText = "$" + step2;
+    }
+
+    const assume1 = items.target.parentElement.closest("div #selectSize");
+    const assume2 = assume1.querySelectorAll("div");
+
+    assume2.forEach((value)=>{
+        value.classList.remove("border-[#6576FF]")
+        value.childNodes[1].classList.remove("text-[#6576FF]")
+    })
+    items.target.closest("div").classList.add("border-[#6576FF]");
+    items.target.closest("div").childNodes[1].classList.add("text-[#6576FF]")
 })
 
