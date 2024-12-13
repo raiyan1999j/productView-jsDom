@@ -3,6 +3,8 @@ const productView = document.getElementById("productView");
 const countOrder  = document.getElementById("countOrder");
 const increment   = document.getElementById("increment");
 const decrement   = document.getElementById("decrement");
+const showPrice   = document.getElementById("showPrice");
+const selectSize  = document.getElementById("selectSize");
 const imgContainer=[
     {
         color:"purple",
@@ -54,3 +56,12 @@ function countCurrentOrder(value){
 
     countOrder.innerText = currentOrder;
 }
+
+// show price base on size
+selectSize.addEventListener("click",(items)=>{
+    const step1 = (items.target.innerText).match(/\d+/g);
+    const step2 = Number(step1).toFixed(2);
+
+    showPrice.innerText = "$" + step2;
+})
+
