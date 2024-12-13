@@ -1,5 +1,8 @@
 const selectColor = document.getElementById("selectColor");
 const productView = document.getElementById("productView");
+const countOrder  = document.getElementById("countOrder");
+const increment   = document.getElementById("increment");
+const decrement   = document.getElementById("decrement");
 const imgContainer=[
     {
         color:"purple",
@@ -36,4 +39,18 @@ function colorBaseProduct(items){
     }else{
         productView.src = productView.src;
     }
+}
+
+// decrement order
+decrement.addEventListener("click",()=>{countCurrentOrder(-1)})
+
+// increment order
+increment.addEventListener("click",()=>{countCurrentOrder(1)})
+
+// count current order
+function countCurrentOrder(value){
+    // console.log(countOrder.innerText)
+    const currentOrder = parseInt(countOrder.innerText) + parseInt(value) < 0 ? 0 : parseInt(countOrder.innerText) + parseInt(value);
+
+    countOrder.innerText = currentOrder;
 }
