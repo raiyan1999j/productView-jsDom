@@ -118,11 +118,19 @@ selectSize.addEventListener("click",(items)=>{
 // add to cart
 function addCart(){
     orderContainer.push({...orderObj})
+    orderObj.price = "$79";
+    orderObj.color = "purple";
+    orderObj.size  = "M";
+    orderObj.qnt   = "0";
+    orderObj.preview= "./resource/image/purple.jpeg"
 
-    console.log(orderContainer)
+    defaultData();
+
+    console.log(orderContainer);
+    
 }
 
-function defaultData(){
+ function defaultData(){
     const bandColor = selectColor.querySelectorAll("div>span");
     const wristSize = selectSize.querySelectorAll("div > div");
     
@@ -133,6 +141,9 @@ function defaultData(){
 
             value.style.borderColor = bgColorCode;
             value.style.borderWidth = "2px";
+        }else{
+            value.style.borderColor = "transparent";
+            value.style.borderWidth = "0px";
         }
     })
 
@@ -142,9 +153,17 @@ function defaultData(){
         if(defaultSize.toLowerCase() == orderObj.size.toLowerCase()){
             value.classList.add("border-[#6576FF]");
 
-            value.children[0].classList.add("text-[#6576FF]")
+            value.children[0].classList.add("text-[#6576FF]");
+        }else{
+            value.classList.remove("border-[#6576FF]");
+            
+            value.children[0].classList.remove("text-[#6576FF]")
         }
     })
+
+    countOrder.innerText = orderObj.qnt;
+    productView.src = orderObj.preview;
+    showPrice.innerText = orderObj.price;
 }
 
 defaultData();
