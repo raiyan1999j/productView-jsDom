@@ -7,13 +7,13 @@ const showPrice   = document.getElementById("showPrice");
 const selectSize  = document.getElementById("selectSize");
 const productTitle= document.getElementById("productTitle").innerText;
 const orderContainer = [];
-const orderObj = {title:productTitle,price:"",color:"",size:"",qnt:"",preview:""};
+const orderObj = {title:productTitle,price:"$79",color:"purple",size:"M",qnt:"0",preview:"./resource/image/purple.jpeg"};
 const imgContainer=[
     {
         color:"purple",
         source:"./resource/image/purple.jpeg"
     },
-    {
+    { 
         color:"black",
         source:"./resource/image/black.jpeg"
     },
@@ -88,7 +88,6 @@ function countCurrentOrder(value){
 selectSize.addEventListener("click",(items)=>{
     const step1 = (items.target.innerText).match(/\d+/g);
     const step2 = Number(step1).toFixed(2);
-    // const step3 = (items.target.innerText).replace(/[^a-zA-Z\s]/g, "");
 
     // get size code
     if(items.target.classList.contains("px-[18px]")){
@@ -118,5 +117,34 @@ selectSize.addEventListener("click",(items)=>{
 })
 // add to cart
 function addCart(){
-   
+    orderContainer.push({...orderObj})
+
+    console.log(orderContainer)
 }
+
+function defaultData(){
+    const bandColor = selectColor.querySelectorAll("div>span");
+    const wristSize = selectSize.querySelectorAll("div > div");
+    
+    bandColor.forEach((value)=>{
+        if(value.id == orderObj.color){
+            const bgColor = value.children[0].attributes[1].nodeValue;
+            const bgColorCode = bgColor.split(":")[1].split(";")[0];
+
+            value.style.borderColor = bgColorCode;
+            value.style.borderWidth = "2px";
+        }
+    })
+
+    wristSize.forEach((value)=>{
+        const defaultSize = (value.children[0].innerText).replace(/[^a-zA-Z\s]/g, "").trim();
+
+        if(defaultSize.toLowerCase() == orderObj.size.toLowerCase()){
+            value.classList.add("border-[#6576FF]");
+
+            value.children[0].classList.add("text-[#6576FF]")
+        }
+    })
+}
+
+defaultData();
