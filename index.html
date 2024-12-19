@@ -18,11 +18,12 @@
     <title>Document</title>
     <!-- tailwindCss -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- main-css -->
+    <link rel="stylesheet" href="./resource/CSS/style.css" />
   </head>
-  <body>
+  <body class="roboto">
     <main>
       <section class="mt-[120px]">
-
         <div
           class="w-[1320px] grid grid-cols-[repeat(2,_630px)] gap-x-[60px] items-center mx-auto"
         >
@@ -43,7 +44,7 @@
           <div class="w-full pt-3">
             <div>
               <h2
-                class="text-[40px] font-roboto font-bold leading-[44px] tracking-[-1.2px] text-[#364A63]"
+                class="text-[40px] font-bold leading-[44px] tracking-[-1.2px] text-[#364A63]"
                 id="productTitle"
               >
                 Classy Modern Smart watch
@@ -83,7 +84,7 @@
 
               <div>
                 <h4
-                  class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7]"
+                  class=" font-normal text-sm leading-[23.1px] text-[#8091A7]"
                 >
                   (2 reviews)
                 </h4>
@@ -93,14 +94,14 @@
             <div class="flex flex-row w-full gap-x-[5px] pt-4">
               <div>
                 <h3
-                  class="font-roboto font-normal text-xl leading-[30px] line-through text-[#8091A7]"
+                  class=" font-normal text-xl leading-[30px] line-through text-[#8091A7]"
                 >
                   $99.00
                 </h3>
               </div>
               <div>
                 <h3
-                  class="font-roboto font-bold text-2xl leading-[30px] text-[#6576FF]"
+                  class="font-bold text-2xl leading-[30px] text-[#6576FF]"
                   id="showPrice"
                 >
                   $79.00
@@ -110,7 +111,7 @@
 
             <div class="pt-5 w-[626px]">
               <h2
-                class="font-roboto font-normal text-lg leading-[30px] text-[#8091A7]"
+                class=" font-normal text-lg leading-[30px] text-[#8091A7]"
               >
                 I must explain to you how all this mistaken idea of denoun cing
                 ple praising pain was born and I will give you a complete
@@ -121,12 +122,12 @@
             <div class="flex flex-row w-full gap-x-[43px] pt-[20.5px]">
               <div>
                 <p
-                  class="font-roboto font-normal text-sm leading-[23.1px] capitalize text-[#8091A7]"
+                  class=" font-normal text-sm leading-[23.1px] capitalize text-[#8091A7]"
                 >
                   type
                 </p>
                 <h4
-                  class="font-roboto font-bold text-base leading-[23px] capitalize text-[#364A63]"
+                  class=" font-bold text-base leading-[23px] capitalize text-[#364A63]"
                 >
                   watch
                 </h4>
@@ -134,12 +135,12 @@
 
               <div>
                 <p
-                  class="font-roboto font-normal text-sm leading-[23.1px] capitalize text-[#8091A7]"
+                  class=" font-normal text-sm leading-[23.1px] capitalize text-[#8091A7]"
                 >
                   model number
                 </p>
                 <h4
-                  class="font-roboto font-bold text-base leading-[23px] capitalize text-[#364A63]"
+                  class=" font-bold text-base leading-[23px] capitalize text-[#364A63]"
                 >
                   Forerunner 290XT
                 </h4>
@@ -148,50 +149,68 @@
 
             <div class="pt-5">
               <h3
-                class="font-roboto font-bold text-[18px] leading-5 text-[#364A63]"
+                class=" font-bold text-[18px] leading-5 text-[#364A63]"
               >
                 Band Color
               </h3>
-              <div class="flex flex-row gap-x-[19px] w-full mt-[10px]" id="selectColor">
+              <div
+                class="flex flex-row gap-x-[19px] w-full mt-[10px]"
+                id="selectColor"
+              >
                 <span
                   class="h-6 w-6 rounded-full bg-transparent flex justify-center items-center transition-all duration-150 ease-linear hover:border-[#816BFF] hover:border-[2px] hover:cursor-pointer active"
                   id="purple"
                 >
-                  <span class="h-4 w-4 rounded-full" style="background-color: #816BFF;"></span>
+                  <span
+                    class="h-4 w-4 rounded-full"
+                    style="background-color: #816bff"
+                  ></span>
                 </span>
                 <span
                   class="h-6 w-6 rounded-full bg-transparent flex justify-center items-center transition-all duration-150 ease-linear hover:border-[#1FCEC9] hover:border-[2px] hover:cursor-pointer"
                   id="blue"
                 >
-                  <span class="h-4 w-4 rounded-full" style="background-color: #1FCEC9;" ></span>
+                  <span
+                    class="h-4 w-4 rounded-full"
+                    style="background-color: #1fcec9"
+                  ></span>
                 </span>
                 <span
                   class="h-6 w-6 rounded-full bg-transparent flex justify-center items-center transition-all duration-150 ease-linear hover:border-[#4B97D3] hover:border-[2px] hover:cursor-pointer"
                   id="cyan"
                 >
-                  <span class="h-4 w-4 rounded-full" style="background-color: #4B97D3;"></span>
+                  <span
+                    class="h-4 w-4 rounded-full"
+                    style="background-color: #4b97d3"
+                  ></span>
                 </span>
                 <span
                   class="h-6 w-6 rounded-full bg-transparent flex justify-center items-center transition-all duration-150 ease-linear hover:border-[#3B4747] hover:border-[2px] hover:cursor-pointer"
                   id="black"
                 >
-                  <span class="h-4 w-4 rounded-full bg-[]" style="background-color: #3B4747"></span>
+                  <span
+                    class="h-4 w-4 rounded-full bg-[]"
+                    style="background-color: #3b4747"
+                  ></span>
                 </span>
               </div>
             </div>
 
             <div class="pt-5">
               <h3
-                class="font-roboto font-bold text-lg leading-5 capitalize text-[#364A63]"
+                class=" font-bold text-lg leading-5 capitalize text-[#364A63]"
               >
                 wrist size
               </h3>
-              <div class="flex flex-row w-full gap-x-3 mt-[10px]" id="selectSize">
+              <div
+                class="flex flex-row w-full gap-x-3 mt-[10px]"
+                id="selectSize"
+              >
                 <div
                   class="py-2 px-[18px] border border-[#8091A7] rounded-[3px] transition-all duration-150 ease-linear group hover:cursor-pointer hover:border-[#6576FF]"
                 >
                   <h2
-                    class="font-roboto font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] flex flex-row gap-x-[10px] group-hover:text-[#6576FF] transition-all duration-150 ease-linear"
+                    class=" font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] flex flex-row gap-x-[10px] group-hover:text-[#6576FF] transition-all duration-150 ease-linear"
                   >
                     S
                     <span class="text-[#8091A7] font-normal"> $69 </span>
@@ -202,7 +221,7 @@
                   class="py-2 px-[18px] border border-[#8091A7] rounded-[3px] transition-all duration-150 ease-linear group hover:cursor-pointer hover:border-[#6576FF]"
                 >
                   <h2
-                    class="font-roboto font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] flex flex-row gap-x-[10px] group-hover:text-[#6576FF] transition-all duration-150 ease-linear"
+                    class=" font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] flex flex-row gap-x-[10px] group-hover:text-[#6576FF] transition-all duration-150 ease-linear"
                   >
                     M
                     <span class="text-[#8091A7] font-normal"> $79 </span>
@@ -213,7 +232,7 @@
                   class="py-2 px-[18px] border border-[#8091A7] rounded-[3px] transition-all duration-150 ease-linear group hover:cursor-pointer hover:border-[#6576FF]"
                 >
                   <h2
-                    class="font-roboto font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] flex flex-row gap-x-[10px] group-hover:text-[#6576FF] transition-all duration-150 ease-linear"
+                    class=" font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] flex flex-row gap-x-[10px] group-hover:text-[#6576FF] transition-all duration-150 ease-linear"
                   >
                     L
                     <span class="text-[#8091A7] font-normal"> $89 </span>
@@ -224,7 +243,7 @@
                   class="py-2 px-[18px] border border-[#8091A7] rounded-[3px] transition-all duration-150 ease-linear group hover:cursor-pointer hover:border-[#6576FF]"
                 >
                   <h2
-                    class="font-roboto font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] flex flex-row gap-x-[10px] group-hover:text-[#6576FF] transition-all duration-150 ease-linear"
+                    class=" font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] flex flex-row gap-x-[10px] group-hover:text-[#6576FF] transition-all duration-150 ease-linear"
                   >
                     XL
                     <span class="text-[#8091A7] font-normal"> $99 </span>
@@ -250,14 +269,17 @@
                   class="h-full w-[60px] flex justify-center items-center border border-[#DBDFEA] border-l-0 border-t-0 border-b-0"
                 >
                   <h2
-                    class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63]"
+                    class="font-normal text-sm leading-[23.1px] text-[#364A63]"
                     id="countOrder"
                   >
                     0
                   </h2>
                 </div>
 
-                <div class="h-full w-[35px] flex justify-center items-center hover:cursor-pointer" id="increment">
+                <div
+                  class="h-full w-[35px] flex justify-center items-center hover:cursor-pointer"
+                  id="increment"
+                >
                   <span class="w-[19px]">
                     <i class="fa-solid fa-plus text-[#8091A7] text-[19px]"></i>
                   </span>
@@ -266,7 +288,7 @@
 
               <div>
                 <button
-                  class="py-2 px-[18px] bg-[#6576FF] rounded-[3px] font-roboto font-bold text-[13px] leading-5 tracking-[0.26px] text-white"
+                  class="py-2 px-[18px] bg-[#6576FF] rounded-[3px] font-bold text-[13px] leading-5 tracking-[0.26px] text-white"
                   onclick="addCart()"
                 >
                   Add to Cart
@@ -287,7 +309,7 @@
           >
             <div>
               <h2
-                class="font-roboto font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] capitalize"
+                class=" font-bold text-sm leading-5 tracking-[0.26px] text-[#364A63] capitalize"
               >
                 checkout
               </h2>
@@ -297,7 +319,7 @@
               class="h-5 w-5 rounded-full bg-white flex justify-center items-center"
             >
               <h2
-                class="font-roboto font-bold text-xs leading-4 tracking-[0.26px] text-[#364A63]"
+                class=" font-bold text-xs leading-4 tracking-[0.26px] text-[#364A63]"
                 id="countCart"
               >
                 0
@@ -307,94 +329,152 @@
         </div>
         <!-- checkoutCount-finish -->
         <!-- modal-start -->
-         <div class="w-full mx-auto fixed top-0 left-0 h-[100vh] bg-black/50 opacity-0">
-          <div class="w-[651px] mx-auto bg-[#FFFFFF] rounded-[20px] py-[44px] translate-y-[247px]">
+        <div
+          class="w-full mx-auto fixed top-0 left-0 h-[100vh] bg-black/50 opacity-0"
+        >
+          <div
+            class="w-[651px] mx-auto bg-[#FFFFFF] rounded-[20px] py-[44px] translate-y-[247px]"
+          >
             <div class="w-[563px] mx-auto">
-              <h2 class="font-roboto font-bold text-[22px] leading-6 capitalize text-[#364A63]">your cart</h2>
+              <h2
+                class=" font-bold text-[22px] leading-6 capitalize text-[#364A63]"
+              >
+                your cart
+              </h2>
             </div>
-  
-            <div class="w-[563px] mx-auto flex flex-row justify-between border border-[#DBDFEA] border-t-0 border-r-0 border-l-0 mt-4 pt-1 pb-2">
-                <div class="w-[278px]">
-                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">Item</h5>
-                </div>
-                <div class="w-[62px]">
-                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">color</h5>
-                </div>
-                <div class="w-[69px]">
-                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">
-                    size
-                  </h5>
-                </div>
-                <div class="w-[59px]">
-                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">qnt</h5>
-                </div>
-                <div class="w-[91px] text-right">
-                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">price</h5>
-                </div>
+
+            <div
+              class="w-[563px] mx-auto flex flex-row justify-between border border-[#DBDFEA] border-t-0 border-r-0 border-l-0 mt-4 pt-1 pb-2"
+            >
+              <div class="w-[278px]">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize"
+                >
+                  Item
+                </h5>
+              </div>
+              <div class="w-[62px]">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize"
+                >
+                  color
+                </h5>
+              </div>
+              <div class="w-[69px]">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize"
+                >
+                  size
+                </h5>
+              </div>
+              <div class="w-[59px]">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize"
+                >
+                  qnt
+                </h5>
+              </div>
+              <div class="w-[91px] text-right">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize"
+                >
+                  price
+                </h5>
+              </div>
             </div>
-  
-            <div class="w-[563px] mx-auto flex flex-row justify-between items-center border border-[#DBDFEA] border-t-0 border-r-0 border-l-0 mt-4 pt-1 pb-2">
+
+            <div
+              class="w-[563px] mx-auto flex flex-row justify-between items-center border border-[#DBDFEA] border-t-0 border-r-0 border-l-0 mt-4 pt-1 pb-2"
+            >
               <div class="w-[278px] flex flex-row items-center">
                 <div class="h-[41.79px] w-[36.64px]">
-                  <img src="./resource/image/purple.jpeg" class="h-full w-full object-contain" alt="image">
+                  <img
+                    src="./resource/image/purple.jpeg"
+                    class="h-full w-full object-contain"
+                    alt="image"
+                  />
                 </div>
                 <div class="ml-[7.36px]">
-                  <p class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">
+                  <p
+                    class=" font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize"
+                  >
                     classy modern smart watch
                   </p>
                 </div>
               </div>
               <div class="w-[62px]">
-                <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63] capitalize">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#364A63] capitalize"
+                >
                   black
                 </h5>
               </div>
               <div class="w-[69px]">
-                <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63] capitalize">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#364A63] capitalize"
+                >
                   xl
                 </h5>
               </div>
               <div class="w-[59px]">
-                <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63] capitalize">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#364A63] capitalize"
+                >
                   1
                 </h5>
               </div>
               <div class="w-[91px] text-right">
-                <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63] capitalize">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#364A63] capitalize"
+                >
                   $99.00
                 </h5>
               </div>
             </div>
-  
-            <div class="w-[563px] mx-auto flex flex-row justify-between mt-4 pt-1 pb-2">
+
+            <div
+              class="w-[563px] mx-auto flex flex-row justify-between mt-4 pt-1 pb-2"
+            >
               <div class="w-[409px]">
-                <h5 class="font-roboto font-bold text-base leaging-[22px] tracking-[-0.2px] capitalize text-[#373737]">
+                <h5
+                  class=" font-bold text-base leaging-[22px] tracking-[-0.2px] capitalize text-[#373737]"
+                >
                   total
                 </h5>
               </div>
               <div class="w-[59px]">
-                <h5 class="font-roboto font-bold text-sm leading-[34px] text-[#364A63] tracking-[-0.2px] capitalize">
+                <h5
+                  class=" font-bold text-sm leading-[34px] text-[#364A63] tracking-[-0.2px] capitalize"
+                >
                   4
                 </h5>
               </div>
               <div class="w-[91px] text-right">
-                <h5 class="font-roboto font-bold text-lg leading-[34px] text-[#364A63] tracking-[-0.2px] capitalize">
+                <h5
+                  class=" font-bold text-lg leading-[34px] text-[#364A63] tracking-[-0.2px] capitalize"
+                >
                   $456.00
                 </h5>
               </div>
             </div>
-  
-            <div class="w-[563px] mx-auto flex flex-row gap-x-6 justify-end mt-4 pt-1 pb-2">
-              <button class="font-bold text-[13px] leading-5 tracking-[0.26px] font-roboto capitalize text-[#364A63] py-2 px-[18px] rounded-[3px] border border-[#DBDFEA]">
+
+            <div
+              class="w-[563px] mx-auto flex flex-row gap-x-6 justify-end mt-4 pt-1 pb-2"
+            >
+              <button
+                class="font-bold text-[13px] leading-5 tracking-[0.26px]  capitalize text-[#364A63] py-2 px-[18px] rounded-[3px] border border-[#DBDFEA]"
+              >
                 continue shopping
               </button>
-              <button class="font-roboto font-bold text-[13px] leading-5 tracking-[0.26px] py-2 px-[18px] rounded-[3px] bg-[#6576FF] capitalize text-white">
+              <button
+                class=" font-bold text-[13px] leading-5 tracking-[0.26px] py-2 px-[18px] rounded-[3px] bg-[#6576FF] capitalize text-white"
+              >
                 checkout
               </button>
             </div>
           </div>
-         </div>
-        
+        </div>
+
         <!-- modal-finish -->
       </section>
     </main>
