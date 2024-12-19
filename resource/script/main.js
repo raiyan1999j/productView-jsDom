@@ -6,8 +6,10 @@ const decrement   = document.getElementById("decrement");
 const showPrice   = document.getElementById("showPrice");
 const selectSize  = document.getElementById("selectSize");
 const countCart   = document.getElementById("countCart");
+const modalBox    = document.getElementById("modalBox");
 const productTitle= document.getElementById("productTitle").innerText;
 const orderContainer = [];
+const toggleModal = {show:false};
 const orderObj = {title:productTitle,price:"$79",color:"purple",size:"M",qnt:"0",preview:"./resource/image/purple.jpeg"};
 const imgContainer=[
     {
@@ -116,11 +118,6 @@ selectSize.addEventListener("click",(items)=>{
     items.target.closest("div").classList.add("border-[#6576FF]");
     items.target.closest("div").childNodes[1].classList.add("text-[#6576FF]")
 });
-
-// showing modal
-countCart.addEventListener("click",(event)=>{
-    
-})
 // add to cart
 function addCart(){
     orderContainer.push({...orderObj})
@@ -175,5 +172,12 @@ function totalCart(){
     productView.src = orderObj.preview;
     showPrice.innerText = orderObj.price;
 }
-
+// preview modal box
+function modalCondition(condition){
+    if(condition){
+        modalBox.classList.remove("hidden","opacity-0");
+    }else{
+        modalBox.classList.add("hidden")
+    }
+}
 defaultData();

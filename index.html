@@ -303,7 +303,7 @@
           <!-- productDetail-finish -->
         </div>
         <!-- checkoutCount-start -->
-        <div class="w-[1320px] mx-auto flex justify-center mt-[111px] mb-5">
+        <div class="w-[1320px] mx-auto flex justify-center mt-[111px] mb-5" onclick="modalCondition(true)">
           <div
             class="flex flex-row justify-center items-center gap-x-[10px] bg-[#FFBB5A] rounded-[20px] w-[139px] h-[42px] hover:cursor-pointer"
           >
@@ -330,7 +330,8 @@
         <!-- checkoutCount-finish -->
         <!-- modal-start -->
         <div
-          class="w-full mx-auto fixed top-0 left-0 h-[100vh] bg-black/50 opacity-0"
+          class="w-full mx-auto fixed top-0 left-0 h-[100vh] bg-black/50 transition-all duration-150 ease-linear hidden" id="modalBox"
+          onclick="modalCondition(false)"
         >
           <div
             class="w-[651px] mx-auto bg-[#FFFFFF] rounded-[20px] py-[44px] translate-y-[247px]"
@@ -462,7 +463,8 @@
               class="w-[563px] mx-auto flex flex-row gap-x-6 justify-end mt-4 pt-1 pb-2"
             >
               <button
-                class="font-bold text-[13px] leading-5 tracking-[0.26px]  capitalize text-[#364A63] py-2 px-[18px] rounded-[3px] border border-[#DBDFEA]"
+                class="font-bold text-[13px] leading-5 tracking-[0.26px]  capitalize text-[#364A63] py-2 px-[18px] rounded-[3px] border border-[#DBDFEA] transition-all duration-150 ease-linear hover:shadow-inner hover:shadow-gray-500"
+                onclick="modalCondition(false)"
               >
                 continue shopping
               </button>
