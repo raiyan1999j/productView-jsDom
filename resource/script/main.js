@@ -8,6 +8,8 @@ const selectSize  = document.getElementById("selectSize");
 const countCart   = document.getElementById("countCart");
 const modalBox    = document.getElementById("modalBox");
 const appendData  = document.getElementById("appendData");
+const totalQnt    = document.getElementById("totalQnt");
+const totalPrice  = document.getElementById("totalPrice");
 const productTitle= document.getElementById("productTitle").innerText;
 const orderContainer = [];
 const toggleModal = {show:false};
@@ -131,6 +133,7 @@ function addCart(){
     defaultData();
     totalCart();
     showCart(orderContainer);
+    totalSum(orderContainer);
 }
 // show cart data
 function showCart(){
@@ -186,6 +189,25 @@ function showCart(){
     })
     
 }
+// total qnt & price
+function totalSum(elements){
+    const qnt = elements.reduce((acc,current)=>{
+        acc += Number(current.qnt);
+
+        return acc;
+    },0);
+
+    const price= elements.reduce((acc,current)=>{
+        const totalPrice = Number(current.qnt) * Number(current.price);
+        
+        acc += totalPrice;
+
+        return acc;
+    },0);
+
+    totalQnt.innerText = qnt;
+    totalPrice.innerText= "$"+price;
+} 
 // show sum of total cart
 function totalCart(){
     const step1 = orderContainer.length;;
