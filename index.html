@@ -22,6 +22,7 @@
   <body>
     <main>
       <section class="mt-[120px]">
+
         <div
           class="w-[1320px] grid grid-cols-[repeat(2,_630px)] gap-x-[60px] items-center mx-auto"
         >
@@ -282,7 +283,7 @@
         <!-- checkoutCount-start -->
         <div class="w-[1320px] mx-auto flex justify-center mt-[111px] mb-5">
           <div
-            class="flex flex-row justify-center items-center gap-x-[10px] bg-[#FFBB5A] rounded-[20px] w-[139px] h-[42px]"
+            class="flex flex-row justify-center items-center gap-x-[10px] bg-[#FFBB5A] rounded-[20px] w-[139px] h-[42px] hover:cursor-pointer"
           >
             <div>
               <h2
@@ -297,6 +298,7 @@
             >
               <h2
                 class="font-roboto font-bold text-xs leading-4 tracking-[0.26px] text-[#364A63]"
+                id="countCart"
               >
                 0
               </h2>
@@ -304,6 +306,96 @@
           </div>
         </div>
         <!-- checkoutCount-finish -->
+        <!-- modal-start -->
+         <div class="w-full mx-auto fixed top-0 left-0 h-[100vh] bg-black/50 opacity-0">
+          <div class="w-[651px] mx-auto bg-[#FFFFFF] rounded-[20px] py-[44px] translate-y-[247px]">
+            <div class="w-[563px] mx-auto">
+              <h2 class="font-roboto font-bold text-[22px] leading-6 capitalize text-[#364A63]">your cart</h2>
+            </div>
+  
+            <div class="w-[563px] mx-auto flex flex-row justify-between border border-[#DBDFEA] border-t-0 border-r-0 border-l-0 mt-4 pt-1 pb-2">
+                <div class="w-[278px]">
+                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">Item</h5>
+                </div>
+                <div class="w-[62px]">
+                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">color</h5>
+                </div>
+                <div class="w-[69px]">
+                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">
+                    size
+                  </h5>
+                </div>
+                <div class="w-[59px]">
+                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">qnt</h5>
+                </div>
+                <div class="w-[91px] text-right">
+                  <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">price</h5>
+                </div>
+            </div>
+  
+            <div class="w-[563px] mx-auto flex flex-row justify-between items-center border border-[#DBDFEA] border-t-0 border-r-0 border-l-0 mt-4 pt-1 pb-2">
+              <div class="w-[278px] flex flex-row items-center">
+                <div class="h-[41.79px] w-[36.64px]">
+                  <img src="./resource/image/purple.jpeg" class="h-full w-full object-contain" alt="image">
+                </div>
+                <div class="ml-[7.36px]">
+                  <p class="font-roboto font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize">
+                    classy modern smart watch
+                  </p>
+                </div>
+              </div>
+              <div class="w-[62px]">
+                <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63] capitalize">
+                  black
+                </h5>
+              </div>
+              <div class="w-[69px]">
+                <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63] capitalize">
+                  xl
+                </h5>
+              </div>
+              <div class="w-[59px]">
+                <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63] capitalize">
+                  1
+                </h5>
+              </div>
+              <div class="w-[91px] text-right">
+                <h5 class="font-roboto font-normal text-sm leading-[23.1px] text-[#364A63] capitalize">
+                  $99.00
+                </h5>
+              </div>
+            </div>
+  
+            <div class="w-[563px] mx-auto flex flex-row justify-between mt-4 pt-1 pb-2">
+              <div class="w-[409px]">
+                <h5 class="font-roboto font-bold text-base leaging-[22px] tracking-[-0.2px] capitalize text-[#373737]">
+                  total
+                </h5>
+              </div>
+              <div class="w-[59px]">
+                <h5 class="font-roboto font-bold text-sm leading-[34px] text-[#364A63] tracking-[-0.2px] capitalize">
+                  4
+                </h5>
+              </div>
+              <div class="w-[91px] text-right">
+                <h5 class="font-roboto font-bold text-lg leading-[34px] text-[#364A63] tracking-[-0.2px] capitalize">
+                  $456.00
+                </h5>
+              </div>
+            </div>
+  
+            <div class="w-[563px] mx-auto flex flex-row gap-x-6 justify-end mt-4 pt-1 pb-2">
+              <button class="font-bold text-[13px] leading-5 tracking-[0.26px] font-roboto capitalize text-[#364A63] py-2 px-[18px] rounded-[3px] border border-[#DBDFEA]">
+                continue shopping
+              </button>
+              <button class="font-roboto font-bold text-[13px] leading-5 tracking-[0.26px] py-2 px-[18px] rounded-[3px] bg-[#6576FF] capitalize text-white">
+                checkout
+              </button>
+            </div>
+          </div>
+         </div>
+        
+        <!-- modal-finish -->
       </section>
     </main>
 

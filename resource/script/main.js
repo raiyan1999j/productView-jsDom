@@ -5,6 +5,7 @@ const increment   = document.getElementById("increment");
 const decrement   = document.getElementById("decrement");
 const showPrice   = document.getElementById("showPrice");
 const selectSize  = document.getElementById("selectSize");
+const countCart   = document.getElementById("countCart");
 const productTitle= document.getElementById("productTitle").innerText;
 const orderContainer = [];
 const orderObj = {title:productTitle,price:"$79",color:"purple",size:"M",qnt:"0",preview:"./resource/image/purple.jpeg"};
@@ -114,6 +115,11 @@ selectSize.addEventListener("click",(items)=>{
     })
     items.target.closest("div").classList.add("border-[#6576FF]");
     items.target.closest("div").childNodes[1].classList.add("text-[#6576FF]")
+});
+
+// showing modal
+countCart.addEventListener("click",(event)=>{
+    
 })
 // add to cart
 function addCart(){
@@ -125,11 +131,15 @@ function addCart(){
     orderObj.preview= "./resource/image/purple.jpeg"
 
     defaultData();
-
-    console.log(orderContainer);
-    
+    totalCart();
 }
+// show sum of total cart
+function totalCart(){
+    const step1 = orderContainer.length;;
 
+    countCart.innerText = step1;
+}
+// show default data
  function defaultData(){
     const bandColor = selectColor.querySelectorAll("div>span");
     const wristSize = selectSize.querySelectorAll("div > div");
