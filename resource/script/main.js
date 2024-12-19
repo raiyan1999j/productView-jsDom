@@ -7,6 +7,7 @@ const showPrice   = document.getElementById("showPrice");
 const selectSize  = document.getElementById("selectSize");
 const countCart   = document.getElementById("countCart");
 const modalBox    = document.getElementById("modalBox");
+const appendData  = document.getElementById("appendData");
 const productTitle= document.getElementById("productTitle").innerText;
 const orderContainer = [];
 const toggleModal = {show:false};
@@ -129,6 +130,61 @@ function addCart(){
 
     defaultData();
     totalCart();
+    showCart(orderContainer);
+}
+// show cart data
+function showCart(){
+    appendData.innerHTML = orderContainer.map((items,index)=>{
+        return `<div
+              class="w-[563px] mx-auto flex flex-row justify-between items-center border border-[#DBDFEA] border-t-0 border-r-0 border-l-0 mt-4 pt-1 pb-2"
+            >
+              <div class="w-[278px] flex flex-row items-center">
+                <div class="h-[41.79px] w-[36.64px]">
+                  <img
+                    src=${items.preview}
+                    class="h-full w-full object-contain"
+                    alt="image"
+                  />
+                </div>
+                <div class="ml-[7.36px]">
+                  <p
+                    class=" font-normal text-sm leading-[23.1px] text-[#8091A7] capitalize"
+                  >
+                    ${items.title}
+                  </p>
+                </div>
+              </div>
+              <div class="w-[62px]">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#364A63] capitalize"
+                >
+                  ${items.color}
+                </h5>
+              </div>
+              <div class="w-[69px]">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#364A63] capitalize"
+                >
+                    ${items.size}
+                </h5>
+              </div>
+              <div class="w-[59px]">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#364A63] capitalize"
+                >
+                  ${items.qnt}
+                </h5>
+              </div>
+              <div class="w-[91px] text-right">
+                <h5
+                  class=" font-normal text-sm leading-[23.1px] text-[#364A63] capitalize"
+                >
+                  $${items.price * items.qnt}
+                </h5>
+              </div>
+            </div>`
+    })
+    
 }
 // show sum of total cart
 function totalCart(){
